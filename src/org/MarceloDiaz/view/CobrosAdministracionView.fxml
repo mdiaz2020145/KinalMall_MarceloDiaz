@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.MarceloDiaz.controller.CobrosAdminController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="206.0" style="-fx-background-color: #B6B3B3;">
+         <children>
+            <Pane layoutX="20.0" prefHeight="160.0" prefWidth="168.0" style="-fx-background-color: #F1F1F1; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <Label alignment="CENTER" layoutY="-2.0" prefHeight="30.0" prefWidth="168.0" text="Cobros de administracion">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="136.0" layoutX="22.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/cobro.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView fitHeight="146.0" fitWidth="142.0" layoutX="458.0" layoutY="276.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/LogoRegresarSinFondo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="476.0" layoutY="7.0" opacity="0.33" prefHeight="116.0" prefWidth="124.0" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="406.0" layoutY="16.0" opacity="0.33" prefHeight="229.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="335.0" layoutY="85.0" opacity="0.33" prefHeight="229.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="283.0" layoutY="174.0" opacity="0.33" prefHeight="229.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+   </children>
+</AnchorPane>

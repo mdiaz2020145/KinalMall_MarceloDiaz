@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracionporId" pageWidth="1450" pageHeight="612" orientation="Landscape" columnWidth="1410" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="3c45aec3-775b-4cad-b66b-1a7df2e6e898">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<parameter name="ADMINISTRACION" class="java.io.InputStream"/>
+	<parameter name="id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReporteAdministracionEmpleadosPorId($P{id});]]>
+	</queryString>
+	<field name="IdEmpleado" class="java.lang.Integer"/>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TelefonoEmpleado" class="java.lang.String"/>
+	<field name="fechaContratacion" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sueldo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreDepartamento" class="java.lang.String"/>
+	<field name="nombreCargos" class="java.lang.String"/>
+	<field name="horarioEntrada" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioSalida" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idAdministracion" class="java.lang.Integer"/>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TelefonoAdmin" class="java.lang.String"/>
+	<title>
+		<band height="198" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="56" width="572" height="60" uuid="6c213029-0916-46b8-a467-1fedc34a40e2"/>
+				<textElement textAlignment="Center">
+					<font size="24" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Administracion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="96" width="100" height="20" uuid="b625ab98-22d7-430f-810a-da8ce1fa6195"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="116" width="259" height="20" uuid="0480ab36-245c-400c-ba32-2137a73d9c42"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Colonia landivar zona 7, Ciudad de guatemala]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="172" y="155" width="100" height="20" uuid="a5f995b1-e036-4140-b169-e0fcbb138e4f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="172" y="136" width="139" height="20" uuid="86353609-a23b-4f83-854e-a07cf6c17aaa"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Telefono:  2216 0000]]></text>
+			</staticText>
+			<image>
+				<reportElement x="572" y="25" width="153" height="111" uuid="704a0d5e-f194-4d0e-b043-a814cfe788fd"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="26" y="25" width="110" height="72" uuid="475863cb-ab05-417e-b85a-d6ebc3a5bd6f"/>
+				<imageExpression><![CDATA[$P{ADMINISTRACION}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39">
+			<staticText>
+				<reportElement x="0" y="2" width="100" height="20" uuid="e879734d-2530-4226-8bb9-f3d0543d8441"/>
+				<text><![CDATA[IdEmpleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="a6e2a9d3-e17a-4cd5-adbe-f17bb034d912"/>
+				<text><![CDATA[nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="0" width="100" height="20" uuid="9b4efe15-58de-4e02-9c86-5e3d998baec9"/>
+				<text><![CDATA[apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="2" width="100" height="20" uuid="188fe021-8e5a-48e8-bca7-729c33d0617c"/>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="2" width="100" height="20" uuid="6fc81c13-c578-49a3-beff-bbfa332daa64"/>
+				<text><![CDATA[TelefonoEmpleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="2" width="100" height="20" uuid="a0fa4e3f-bfe2-4686-8dd9-f903bce056fa"/>
+				<text><![CDATA[fechaContratacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="611" y="2" width="100" height="20" uuid="b340ae38-83f6-4b16-afc9-51a5882bf9de"/>
+				<text><![CDATA[sueldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="711" y="0" width="100" height="20" uuid="f02ad137-a196-4f1b-a6de-ce95166ad020"/>
+				<text><![CDATA[NombreDepartamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="811" y="2" width="100" height="20" uuid="3f77e30c-05a4-4c67-a130-b2ab33dde666"/>
+				<text><![CDATA[nombreCargos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="911" y="0" width="100" height="20" uuid="7fac000c-121b-4661-b6a0-5d439cc8a1f0"/>
+				<text><![CDATA[horarioEntrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1011" y="2" width="100" height="20" uuid="848cc894-33bc-4b1b-9407-37b1e1d7e1a0"/>
+				<text><![CDATA[horarioSalida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1111" y="2" width="100" height="20" uuid="af3c3358-36f9-4fb0-8356-cb414d7a2bf4"/>
+				<text><![CDATA[idAdministracion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1211" y="1" width="100" height="20" uuid="36fe15b6-9807-4033-881a-f8add26eb457"/>
+				<text><![CDATA[direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1311" y="3" width="100" height="20" uuid="6c2a183c-a119-4a2d-b714-ffbca4422bd5"/>
+				<text><![CDATA[TelefonoAdmin]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="73" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="-10" y="0" width="1435" height="20" forecolor="#FF0000" uuid="5633ffd0-4772-4b04-9ac1-aa09e44c8879"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="28cba2e7-10e2-49d3-a21a-30cee5c5b7f0"/>
+				<textFieldExpression><![CDATA[$F{IdEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="0" width="100" height="20" uuid="49ec671c-7b1e-4776-a95b-0812e541bfd2"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="0" width="100" height="20" uuid="adcaa788-dd9d-4096-98b5-d34105d51c66"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="0" width="100" height="20" uuid="7d8eff85-e65c-468f-8b04-0c549b9caf19"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="0" width="100" height="20" uuid="b3ff35da-392a-4d5d-83e7-a08080c2d139"/>
+				<textFieldExpression><![CDATA[$F{TelefonoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="511" y="0" width="100" height="20" uuid="2ab5d4c6-d886-477b-82ba-4610ccc181e6"/>
+				<textFieldExpression><![CDATA[$F{fechaContratacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="611" y="0" width="100" height="20" uuid="00cf3abe-e20f-4288-b510-7da8660ef1d8"/>
+				<textFieldExpression><![CDATA[$F{sueldo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="711" y="0" width="100" height="20" uuid="0224082f-da70-4639-8847-d9584fd716ba"/>
+				<textFieldExpression><![CDATA[$F{NombreDepartamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="811" y="0" width="100" height="20" uuid="6570059d-6349-4e85-ba7c-20b4d0c62ca6"/>
+				<textFieldExpression><![CDATA[$F{nombreCargos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="911" y="0" width="100" height="20" uuid="8453b5d1-0421-4c91-879a-3854542e07c7"/>
+				<textFieldExpression><![CDATA[$F{horarioEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1011" y="0" width="100" height="20" uuid="2e09d864-5211-402a-ae69-4a586da4436a"/>
+				<textFieldExpression><![CDATA[$F{horarioSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1111" y="0" width="100" height="20" uuid="9b361628-26a4-4569-962e-627a8c2ad8c7"/>
+				<textFieldExpression><![CDATA[$F{idAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1211" y="0" width="100" height="20" uuid="d4ac06d2-33d9-4787-bc05-650be06143b8"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1311" y="0" width="100" height="20" uuid="3aa400ab-78f1-4fb3-966d-91bcf2afe4c4"/>
+				<textFieldExpression><![CDATA[$F{TelefonoAdmin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="118">
+			<staticText>
+				<reportElement x="390" y="58" width="164" height="20" uuid="8046ac04-70d4-4f16-9608-e63e5f72885c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Marcelo Javier Diaz Pineda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="78" width="164" height="20" uuid="a92016c9-6b18-4396-bd6e-9824d6586db7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[mdiaz-2020145@kinal.edu.gt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="98" width="164" height="20" uuid="e539ace6-42d4-406d-aa46-055b98a8e814"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[IN5BM]]></text>
+			</staticText>
+			<image>
+				<reportElement x="36" y="16" width="167" height="87" uuid="cfe4805c-b1a4-44cb-94b7-4b5e00154859"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="-10" y="-92" width="1435" height="1" forecolor="#FF0000" uuid="b9c327ac-2759-40e2-ac1f-9818f3ed9778"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="1002.0" stylesheets="@../resource/css/EstiloCrud.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.MarceloDiaz.controller.ProveedoresController">
+   <children>
+      <Pane prefHeight="448.0" prefWidth="202.0" style="-fx-background-color: #B6B3B3;">
+         <children>
+            <Pane layoutX="14.0" prefHeight="138.0" prefWidth="175.0" style="-fx-background-color: #F1F1F1; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <Label alignment="CENTER" layoutY="-1.0" prefHeight="30.0" prefWidth="175.0" text="Proveedores">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="107.0" fitWidth="146.0" layoutX="34.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/inventario.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="26.0" layoutY="170.0" prefHeight="200.0" prefWidth="151.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="48.0" prefWidth="151.0" styleClass="btnNuevo" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="39.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/boton-agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificar" prefHeight="50.0" prefWidth="150.0" styleClass="btnModificar" text="Modificar">
+                     <graphic>
+                        <ImageView fx:id="imgModificar" fitHeight="39.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" styleClass="btnModificar">
+                           <image>
+                              <Image url="@../resource/images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="54.0" prefWidth="151.0" styleClass="btnEliminar" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="42.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/marca-x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="48.0" prefWidth="151.0" styleClass="btnReporte" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Button layoutX="1.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#cuentasPorPagar" prefHeight="50.0" prefWidth="202.0" styleClass="btnNuevo" text="Cuentas Por Pagar">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/pagos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="95.0" fitWidth="124.0" layoutX="903.0" layoutY="353.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/LogoRegresarSinFondo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="475.0" layoutY="8.0" opacity="0.33" prefHeight="116.0" prefWidth="124.0" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="404.0" layoutY="9.0" opacity="0.33" prefHeight="229.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="328.0" layoutY="72.0" opacity="0.33" prefHeight="229.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="279.0" layoutY="161.0" opacity="0.33" prefHeight="229.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <TableView fx:id="tblProveedores" layoutX="217.0" layoutY="239.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="686.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="55.19996643066406" text="ID" />
+          <TableColumn fx:id="colNit" prefWidth="91.20001220703125" text="NIT" />
+            <TableColumn fx:id="colServicio" prefWidth="111.20001220703125" text="Servicio Prestado" />
+            <TableColumn fx:id="colTelefono" prefWidth="104.79998779296875" text="Telefono" />
+            <TableColumn fx:id="colDireccion" prefWidth="92.800048828125" text="Direccion" />
+            <TableColumn fx:id="colSaldoFavor" prefWidth="109.59991455078125" text="Saldo Favor" />
+            <TableColumn fx:id="colSaldoContra" prefWidth="119.99997558593748" text="Saldo contra" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="217.0" layoutY="27.0" prefHeight="178.0" prefWidth="710.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.000048828125" minWidth="10.0" prefWidth="136.000048828125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.59995117187503" minWidth="10.0" prefWidth="154.59995117187503" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.39996337890625" minWidth="10.0" prefWidth="51.19998779296873" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.80001220703122" minWidth="10.0" prefWidth="179.20001220703125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.79995117187502" minWidth="10.0" prefWidth="183.99990234375002" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="47.99998779296875" minHeight="10.0" prefHeight="34.39998779296875" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="55.60001220703125" minHeight="10.0" prefHeight="39.19998168945313" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.20000610351562" minHeight="10.0" prefHeight="41.59999389648438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="39.20001831054687" minHeight="10.0" prefHeight="31.00001220703126" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.199987792968756" minHeight="10.0" prefHeight="35.199987792968756" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="58.0" text="ID">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="NIT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Servicio Prestado" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Telefono" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Direccion" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Saldo Favor" GridPane.columnIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Saldo Contra" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Saldo Liquido" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNit" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtServicio" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtTelefono" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtDireccion" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtSaldoFavor" editable="false" GridPane.columnIndex="4" />
+            <TextField fx:id="txtSaldoContra" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="txtSaldoLiquido" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

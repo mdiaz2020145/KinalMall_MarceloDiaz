@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="857.0" stylesheets="@../resource/css/EstiloAdministracion.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.MarceloDiaz.controller.AdministracionController">
+   <children>
+      <Pane prefHeight="438.0" prefWidth="206.0" style="-fx-background-color: #B6B3B3;">
+         <children>
+            <Pane layoutX="16.0" prefHeight="157.0" prefWidth="170.0" style="-fx-background-color: #F1F1F1; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="36.0" prefWidth="170.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="170.0" text="Administracion" textAlignment="CENTER">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="116.0" fitWidth="126.0" layoutX="27.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/presupuesto.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="17.0" layoutY="203.0" prefHeight="181.0" prefWidth="170.0" style="-fx-background-color: #F1F1F1;">
+               <children>
+                  <VBox prefHeight="190.0" prefWidth="170.0" style="-fx-background-color: #B6B3B3;">
+                     <children>
+                        <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="53.0" prefWidth="170.0" styleClass="btnNuevo" text="Nuevo">
+                           <graphic>
+                              <ImageView fx:id="imgNuevo" fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/images/boton-agregar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificar" prefHeight="52.0" prefWidth="170.0" styleClass="btnModificar" text="Modificar">
+                           <graphic>
+                              <ImageView fx:id="imgModificar" fitHeight="46.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/images/editar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="57.0" prefWidth="170.0" styleClass="btnEliminar" text="Eliminar">
+                           <graphic>
+                              <ImageView fx:id="imgEliminar" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/images/marca-x.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="42.0" prefWidth="170.0" styleClass="btnReporte" text="Reporte">
+                           <graphic>
+                              <ImageView fx:id="imgReporte" fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/images/reporte.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView fitHeight="150.0" fitWidth="131.0" layoutX="726.0" layoutY="321.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/LogoRegresarSinFondo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="433.0" layoutY="72.0" opacity="0.31" prefHeight="206.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="367.0" layoutY="150.0" opacity="0.33" prefHeight="229.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="283.0" layoutY="216.0" opacity="0.33" prefHeight="210.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="469.0" layoutY="7.0" opacity="0.33" prefHeight="116.0" prefWidth="124.0" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Label layoutX="214.0" layoutY="20.0" prefHeight="30.0" prefWidth="34.0" text="ID:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="71.0" text="Direccion:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="214.0" layoutY="119.0" text="Telefono:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAdministracion" layoutX="217.0" layoutY="204.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="206.0" prefWidth="428.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="42.39994812011719" text="ID" />
+          <TableColumn fx:id="colDireccion" prefWidth="233.60003662109375" text="Direccion" />
+            <TableColumn fx:id="colTelefono" prefWidth="150.4000244140625" text="Telefono" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtId" editable="false" layoutX="250.0" layoutY="23.0" prefHeight="26.0" prefWidth="244.0" />
+      <TextField fx:id="txtDireccion" editable="false" layoutX="298.0" layoutY="72.0" prefHeight="26.0" prefWidth="206.0" />
+      <TextField fx:id="txtTelefono" editable="false" layoutX="299.0" layoutY="120.0" prefHeight="26.0" prefWidth="194.0" />
+      <Button layoutX="657.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#departamentos" prefHeight="36.0" prefWidth="159.0" text="Departamentos ">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/departamento.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="657.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#cargos" prefHeight="50.0" prefWidth="159.0" text="Cargos">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/puesto-de-trabajo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="657.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#tipoCliente" prefHeight="36.0" prefWidth="159.0" text="Tipo Clientes">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/comportamiento-del-cliente.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="664.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#locales" prefHeight="51.0" prefWidth="159.0" text="Locales">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/unknown.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

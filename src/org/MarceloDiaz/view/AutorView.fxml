@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.MarceloDiaz.controller.AutorController">
+   <children>
+      <ImageView fitHeight="263.0" fitWidth="512.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/fondo3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="204.0" fitWidth="128.0" layoutX="14.0" layoutY="26.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/Foto.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="208.0" layoutY="26.0" prefHeight="38.0" prefWidth="218.0" text="Acerca del autor" textFill="#04245f">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="64.0" prefHeight="28.0" prefWidth="98.0" text="Nombre:" textFill="#04245f" />
+      <Label layoutX="215.0" layoutY="64.0" prefHeight="28.0" prefWidth="228.0" text="Marcelo Javier Diaz Pineda" />
+      <Label layoutX="159.0" layoutY="102.0" prefHeight="18.0" prefWidth="46.0" text="Grado:" textFill="#04245f" />
+      <Label layoutX="209.0" layoutY="97.0" prefHeight="28.0" prefWidth="154.0" text="Quinto informatica" />
+      <Label layoutX="159.0" layoutY="131.0" prefHeight="18.0" prefWidth="46.0" text="Seccion:" textFill="#04245f" />
+      <Label layoutX="215.0" layoutY="131.0" prefHeight="18.0" prefWidth="34.0" text="B" />
+      <Label layoutX="154.0" layoutY="168.0" prefHeight="18.0" prefWidth="55.0" text="Jornada:" textFill="#04245f" />
+      <Label layoutX="205.0" layoutY="168.0" prefHeight="18.0" prefWidth="88.0" text="Matutina" />
+      <ImageView fitHeight="133.0" fitWidth="154.0" layoutX="350.0" layoutY="120.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/LogoRegresarSinFondo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/05/2021, 10:56:47
+    Author     : doazm
+*/
+.menu-bar{
+    -fx-background-color:lightgrey;  
+    -fx-Opacity: 0.9; 
+}
+.menu-bar.label{
+    -fx-text-fill:#EC0606;
+}
+.menu-bar .menu-button .label:hover{
+    -fx-background-color:darkgray;
+}
+.menu-item:hover{
+    -fx-background-color:darkgray;
+}
+.menu-item{
+    -fx-background-color: darkgray;
+    -fx-text-fill:#EC0606;
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteDepartamento" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="8231e3b7-de20-43f9-a132-9de7789af2bf">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<parameter name="DEPARTAMENTO" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[SELECT * FROM Departamentos]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="id_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{id}]]></variableExpression>
+	</variable>
+	<title>
+		<band height="135" splitType="Stretch">
+			<staticText>
+				<reportElement x="167" y="0" width="248" height="34" uuid="41d0c054-9f80-4701-94f8-7c7d7b467a1a"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Reporte Departamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="34" width="100" height="20" uuid="fccaf5a1-6a87-4709-95c8-e91dbbe6e70d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="54" width="288" height="20" uuid="f4525541-a213-4012-902b-694256e62059"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Colonia landivar zona 7, Ciudad de guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="74" width="288" height="20" uuid="4da857f9-a7a8-49c1-ba1b-3047e4e6264d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Telefono:  2216 0000]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="167" y="94" width="100" height="20" uuid="9ca848d0-e246-43b6-9333-95ce2972726e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="455" y="0" width="117" height="74" uuid="81316f1c-26ca-4f51-a2f8-cb6ea32e717c"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="13" y="4" width="132" height="90" uuid="c31eb954-b380-44e8-92fe-0a6ca6192cad"/>
+				<imageExpression><![CDATA[$P{DEPARTAMENTO}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="39" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="0" width="100" height="20" uuid="e3f01585-d91b-44df-8c62-6b4e54b79abb"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="0" width="100" height="20" uuid="f5f4515e-21d1-43bf-ac5b-366d620dd582"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="20" width="402" height="1" forecolor="#FF0000" uuid="cf84d5b2-1c9a-43a2-97f7-4139cb2298d5"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="58" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="21" width="572" height="20" forecolor="#FF0000" uuid="434f7709-46a2-461e-b708-e2e7b0a19473"/>
+			</rectangle>
+			<textField>
+				<reportElement x="28" y="21" width="100" height="20" uuid="83883716-d5f6-4fb1-95d2-ab31cf5724c9"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="283" y="21" width="172" height="20" uuid="c621d82a-d7cc-4980-81bd-18cc6f07040d"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="131" splitType="Stretch">
+			<image>
+				<reportElement x="28" y="29" width="167" height="87" uuid="79443554-3697-4525-bdc7-86bd8c2827ec"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="383" y="44" width="147" height="20" uuid="054d9766-b248-4020-a6e7-a4095a9077f3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Marcelo Javier Diaz Pineda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="64" width="166" height="20" uuid="e04d6069-6da6-4956-83d9-03541e11596f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[mdiaz-2020145@kinal.edu.gt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="84" width="166" height="20" uuid="675907aa-2bff-44d1-98f8-d867142115ab"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[IN5BM]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

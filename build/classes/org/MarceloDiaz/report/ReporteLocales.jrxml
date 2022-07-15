@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteLocales" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="6a0c12f2-7b27-4c08-bc15-60a9dac5e155">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<parameter name="LOCALES" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[SELECT * FROM Locales]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoFavor" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoContra" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mesesPendientes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="disponibilidad" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorLocal" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorAdministracion" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="131" splitType="Stretch">
+			<staticText>
+				<reportElement x="198" y="0" width="183" height="34" uuid="5955601e-a9e2-4d1f-b7e0-c8a7f8e2635a"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Reporte Locales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="34" width="100" height="20" uuid="adfbae6b-5853-4871-8929-3797a43811e8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="54" width="274" height="20" uuid="17e15c38-b0fb-4c47-9205-2abae8bd38a6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Colonia landivar zona 7, Ciudad de guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="74" width="136" height="20" uuid="b9431a99-b78d-467a-9374-d01007cf5fc6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Telefono:  2216 0000]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="198" y="94" width="100" height="20" uuid="c8ecf95b-b137-4868-95fe-4b05d9553e45"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="474" y="0" width="98" height="94" uuid="40b8e56c-912b-46b2-8a2e-741a37d3e56f"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="19" y="4" width="100" height="90" uuid="899544aa-3ac7-4637-b503-787ef9a239e0"/>
+				<imageExpression><![CDATA[$P{LOCALES}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="27" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="42" height="20" uuid="a830cb07-4264-4d0f-9c31-110e79bf0d0d"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="20" width="78" height="20" uuid="d70fafee-4fea-45e0-bdd9-ac7b5a28b156"/>
+				<text><![CDATA[saldoFavor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="20" width="84" height="20" uuid="fe87749a-d8d4-41e9-9094-75f87a1b6406"/>
+				<text><![CDATA[saldoContra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="21" width="84" height="20" uuid="991515d6-990a-4e74-9310-a053cd31bde1"/>
+				<text><![CDATA[mesesPendientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="21" width="69" height="20" uuid="6f05e269-7ca2-4d5d-8262-77710e16d311"/>
+				<text><![CDATA[disponibilidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="21" width="71" height="20" uuid="48b75205-1b93-421c-a5d3-5023e804e2cf"/>
+				<text><![CDATA[Valor Local]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="20" width="100" height="20" uuid="fc633e6e-4ac2-4405-a64e-b1d6264acf15"/>
+				<text><![CDATA[valorAdministracion]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="40" width="572" height="1" forecolor="#FF0000" uuid="279b978a-a771-4630-be04-d4ac5c7eb556"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="58" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="-18" y="12" width="602" height="20" forecolor="#FF0000" uuid="89ddc341-2601-4eae-b84a-31c3a500e3fb"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="12" width="42" height="20" uuid="3bd28ae5-a82f-4648-a320-0d7036b67f66"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="12" width="78" height="20" uuid="54dd38ea-7f13-4e22-8bb3-6aeb067a028c"/>
+				<textFieldExpression><![CDATA[$F{saldoFavor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="12" width="84" height="20" uuid="3ec44e1b-fc37-47a6-ad03-f307bcda6be2"/>
+				<textFieldExpression><![CDATA[$F{saldoContra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="12" width="100" height="20" uuid="a02d0311-ae77-4c0a-a454-8639fd1a8882"/>
+				<textFieldExpression><![CDATA[$F{mesesPendientes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="12" width="83" height="20" uuid="8eb8875c-5f41-4736-8872-0777c93ded3d"/>
+				<textFieldExpression><![CDATA[$F{disponibilidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="12" width="68" height="20" uuid="8299bed2-c403-483d-af44-4b84e4e3021b"/>
+				<textFieldExpression><![CDATA[$F{valorLocal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="12" width="110" height="20" uuid="fc0e5383-f897-4541-8910-9830c32de759"/>
+				<textFieldExpression><![CDATA[$F{valorAdministracion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="19" y="0" width="113" height="111" uuid="ee0582e2-c4d1-4dc2-9934-d36c5451d958"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="381" y="20" width="172" height="20" uuid="1bfbec5b-5cf6-4ffc-bfc2-a43a4641aafb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Marcelo Javier Diaz Pineda ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="40" width="172" height="20" uuid="bee32333-97b6-44c0-b534-67a85197c707"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[mdiaz-2020145@kinal.edu.gt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="60" width="100" height="20" uuid="d72a586a-9cbd-4db5-a0a5-33620f346fa2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[IN5BM]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="1076.0" stylesheets="@../resource/css/EstiloLocales.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.MarceloDiaz.controller.LocalesController">
+   <children>
+      <Pane prefHeight="451.0" prefWidth="206.0" style="-fx-background-color: #B6B3B3;">
+         <children>
+            <Pane layoutX="16.0" prefHeight="157.0" prefWidth="170.0" style="-fx-background-color: #F1F1F1; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="36.0" prefWidth="170.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="170.0" text="Locales" textAlignment="CENTER">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="116.0" fitWidth="126.0" layoutX="27.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/unknown.png" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="17.0" layoutY="203.0" prefHeight="181.0" prefWidth="170.0" style="-fx-background-color: #F1F1F1;">
+               <children>
+                  <VBox prefHeight="190.0" prefWidth="170.0" style="-fx-background-color: #B6B3B3;">
+                     <children>
+                        <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="53.0" prefWidth="170.0" styleClass="btnNuevo" text="Nuevo">
+                           <graphic>
+                              <ImageView fx:id="imgNuevo" fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/images/boton-agregar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificar" prefHeight="52.0" prefWidth="170.0" styleClass="btnModificar" text="Modificar">
+                           <graphic>
+                              <ImageView fx:id="imgModificar" fitHeight="38.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/images/editar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="57.0" prefWidth="170.0" styleClass="btnEliminar" text="Eliminar">
+                           <graphic>
+                              <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/images/marca-x.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="42.0" prefWidth="170.0" styleClass="btnReporte" text="Reporte">
+                           <graphic>
+                              <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/images/reporte.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView fitHeight="94.0" fitWidth="116.0" layoutX="982.0" layoutY="365.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/LogoRegresarSinFondo.png" />
+         </image></ImageView>
+      <Pane layoutX="526.0" layoutY="146.0" opacity="0.31" prefHeight="206.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="367.0" layoutY="150.0" opacity="0.33" prefHeight="229.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="283.0" layoutY="216.0" opacity="0.33" prefHeight="210.0" prefWidth="55.0" rotate="-48.2" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Pane layoutX="469.0" layoutY="7.0" opacity="0.33" prefHeight="116.0" prefWidth="124.0" style="-fx-background-color: #B6B3B3; -fx-background-radius: 80;" />
+      <Label layoutX="210.0" layoutY="35.0" prefHeight="30.0" prefWidth="34.0" text="ID:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="83.0" text="Saldo favor">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="214.0" layoutY="131.0" text="Saldo contra">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblLocales" layoutX="227.0" layoutY="236.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="206.0" prefWidth="766.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colSaldoFavor" prefWidth="136.0" text="Saldo favor" />
+            <TableColumn fx:id="colSaldoContra" prefWidth="132.0" text="Saldo contra" />
+            <TableColumn fx:id="colMesesPendiente" prefWidth="115.20001220703125" text="Meses Pendiente" />
+            <TableColumn fx:id="colDisponibilidad" prefWidth="100.0" text="Disponibilidad" />
+            <TableColumn fx:id="colValorLocal" prefWidth="78.4000244140625" text="Valor Local" />
+            <TableColumn fx:id="colValorAdministracion" prefWidth="128.0" text="Valor Administracion" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtId" layoutX="250.0" layoutY="37.0" prefHeight="26.0" prefWidth="244.0" />
+      <TextField fx:id="txtSaldoFavor" layoutX="304.0" layoutY="83.0" prefHeight="26.0" prefWidth="206.0" />
+      <TextField fx:id="txtContra" layoutX="325.0" layoutY="134.0" prefHeight="26.0" prefWidth="194.0" />
+      <Label layoutX="563.0" layoutY="20.0" prefHeight="30.0" prefWidth="150.0" text="Meses Pendiente">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMeses" layoutX="730.0" layoutY="23.0" prefHeight="26.0" prefWidth="180.0" />
+      <Label layoutX="563.0" layoutY="69.0" prefHeight="30.0" prefWidth="131.0" text="Disponibilidad">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="571.0" layoutY="117.0" prefHeight="18.0" prefWidth="116.0" text="Valor local">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorLocal" layoutX="713.0" layoutY="119.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="510.0" layoutY="160.0" text="Valor administracion:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorAdmin" layoutX="708.0" layoutY="162.0" prefHeight="26.0" prefWidth="194.0" />
+      <CheckBox fx:id="checDisponibilidad" layoutX="708.0" layoutY="75.0" mnemonicParsing="false" text="CheckBox" />
+      <Label layoutX="227.0" layoutY="176.0" text="Saldo liquido">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSaldoLiquido" layoutX="348.0" layoutY="177.0" />
+      <Label layoutX="528.0" layoutY="202.0" prefHeight="30.0" prefWidth="180.0" text="Locales Disponibles ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLocales" editable="false" layoutX="730.0" layoutY="204.0" prefHeight="26.0" prefWidth="214.0" />
+   </children>
+</AnchorPane>

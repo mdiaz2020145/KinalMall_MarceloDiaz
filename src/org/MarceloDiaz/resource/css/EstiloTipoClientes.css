@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/06/2021, 12:43:44
+    Author     : doazm
+*/
+.btnNuevo{
+   -fx-background-color: #B6B3B3; 
+   -fx-background-radius: 30 30 30 30; 
+   -fx-font-size:15px; 
+}
+.btnModificar{
+    -fx-background-color: #B6B3B3; 
+    -fx-background-radius: 30 30 30 30; 
+   -fx-font-size:15px; 
+}
+.btnEliminar{
+    -fx-background-color: #B6B3B3; 
+    -fx-background-radius: 30 30 30 30; 
+   -fx-font-size:15px; 
+}
+.btnReporte{
+    -fx-background-color: #B6B3B3; 
+    -fx-background-radius: 30 30 30 30; 
+   -fx-font-size:15px; 
+}
+.btnNuevo:hover{
+    -fx-background-color:white; 
+}
+.btnModificar:hover{
+    -fx-background-color:white; 
+}
+.btnEliminar:hover{
+    -fx-background-color:white; 
+}
+.btnReporte:hover{
+    -fx-background-color:white; 
+}
+
